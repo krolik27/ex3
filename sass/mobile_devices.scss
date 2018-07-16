@@ -1,0 +1,58 @@
+@import "variables";
+.mobile-devices{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 79px;
+  background-color: $color10;
+  box-sizing: border-box;
+  overflow: hidden;
+  &-txt{
+    margin-top: 77px;
+    font-family: $font1;
+    color: $color7;
+    @include font(300, 16px, 28px, left);
+    width: $width/2.922;
+  }
+  img{
+    width: $width/4.54;
+    height: $width/3.116;
+    transition: all 0.5s;
+    &:hover{
+      transform: scale(1.2);
+      }
+    }
+}
+  
+details{
+  line-height: 32px;
+  margin-left: 30px;
+}
+
+summary{
+  padding-bottom: 3px;
+  outline: none;
+}
+
+details summary::-webkit-details-marker{
+  display: none;
+  background: $color9;
+  color: $color2;
+}
+
+details summary:before{
+  content: " > ";
+  border-radius: 100%;
+  background-color: $color9;
+  color: $color2;
+  @include font(500, 25px, 20px, center);
+  float: left;
+  width: 21px;
+  height: 21px;
+  margin: 0 7px 0 0;
+}
+
+details[open] summary:before{
+  content: " < ";
+  background-color: $color13;
+}

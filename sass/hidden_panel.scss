@@ -1,0 +1,84 @@
+@import "variables";
+.hidden-panel-social{
+  position: fixed;
+  right: 0;
+  top: 40%;
+  background: $color5;
+  border: $border $color2;
+  width: $width/19;
+  height: $width/48;
+  font-family: $font2;
+  color: $color2;
+  @include font(600, 16px, 24px, left);
+  padding: 0 5px 15px 15px;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-border-radius: 15px 0 15px 0;
+  -moz-border-radius: 15px 0 15px 0;
+  border-radius: 15px 0 15px 0;
+  &:hover{
+    color: $color6;
+  }
+}
+
+.foot_bottom_social{
+  position: fixed;
+  top: 40%;
+  right: -$width/3.84;
+  width: $width/10.66;
+  height: $width/64;
+  padding: 0 0 50px 0;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+
+.hidden-panel-social:hover{
+  top: 45%;
+  & .foot_bottom_social{
+    right: 0;
+  }
+}
+
+.bottom_social{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 2px;
+
+}
+.vk{
+  background: url('../img/social.png') 30px 0;
+} 
+a.vk:hover{
+  background: url('../img/social.png') 0 0;
+} 
+.fb{
+  background: url('../img/social.png') 30px -30px;
+} 
+a.fb:hover{
+ background: url('../img/social.png') 0 -30px;  
+} 
+.twt{
+  background: url('../img/social.png') 30px -60px;
+} 
+a.twt:hover {
+  background: url('../img/social.png') 0 -60px;
+}
+.google_plus{
+  background: url('../img/social.png') 30px -180px;
+} 
+a.google_plus:hover{
+  background: url('../img/social.png') 0 -180px;
+}
+.insta{
+  background: url('../img/social.png') 30px -210px;
+}
+a.insta:hover{
+  background: url('../img/social.png') 0 -210px;
+}

@@ -1,0 +1,35 @@
+@import "variables";
+.posts{
+  padding-top: 60px;
+  font-family: $font4;
+  color: $color8;
+  @include font(600, 30px, 28px, center);
+  p{
+    font-family: $font1;
+    color: $color7;
+    @include font(300, 16px, 28px, center);
+  }
+}
+
+.posts-article h4{
+  color: $color8;
+  font-size: 20px;
+  margin-bottom: 19px;
+  &:after{
+    border: none;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+.posts-article p{
+  @include font(300, 14px, 22px, left)
+}
+
+.posts-article span{
+  color: $color9;
+  @include font(300, 14px, 20px, left);
+  display: block;
+  margin-top: 27px;
+}

@@ -1,0 +1,43 @@
+@import "variables";
+.services-ideas{
+  padding: $width/38.4 $width/5.56 $width/3.8 $width/5.56;
+  background-color: $color10;
+  font-family: $font1;
+  color: $color7;
+  @include font(300, 16px, 28px, center);
+  background-image: url(../img/browser-center.jpg), url(../img/browser-left.jpg), url(../img/browser-right.jpg);
+  background-repeat: no-repeat;
+  background-position: $width/3.22 bottom, $width/5.56 bottom, $width/2.28 bottom;
+  background-size: $width/2.56  $width/3.98, $width/2.56 $width/4.8, $width/2.56 $width/4.8;
+}
+
+h3{
+  font-family: $font4;
+  color: $color8;
+  @include font(600, 30px, 28px, center);
+}
+
+aside{
+  padding: $width/38.4 $width/5.12 $width/48 $width/5.12;
+  font-family: $font1;
+  color: $color11;
+  @include font(300, 18px, 20px, left);
+  background: -webkit-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+  background: -moz-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+  background: -o-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+  background: -ms-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+  background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h3{
+    width: 100%;
+    @include font(400, 16px, 28px, left);
+    color: $color2;
+    margin: 0;
+  }
+}
+
+.waxom-color{
+  color: $color9;
+}

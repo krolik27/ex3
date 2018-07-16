@@ -1,0 +1,38 @@
+@import "variables";
+.footer2{
+  margin: 0;
+  width: 100%;
+  padding: 45px 0;
+  background-color: $color15;
+  font-family: $font1;
+  color: $color1;
+  font-size: 13px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer_color{
+  color: $color16;
+}
+.footer_color2{
+  color: $color9;
+}
+
+.footer-list a{
+  color: $color1;
+  @include font(300, 13px, 20px, left);
+  &:hover{
+    color: $color17;
+  }
+}
+
+.footer-list-nav li{
+  margin-right: 10px;
+}
+  
+.footer-list{
+  list-style-type: none;
+  display: flex;
+  margin-right: $width/4.27;
+}

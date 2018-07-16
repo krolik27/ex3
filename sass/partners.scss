@@ -1,0 +1,22 @@
+@import "variables";
+.partners{
+  padding: $width/13.7 0;
+  width: 100%;
+  margin: 0;
+  background-color: $color1;
+  background-image: url(../img/fon4.jpg);
+  background-position: -$width/4.8 0;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logotype-svg-partners{
+  fill: $color2;
+  flex: 0 0 20%;
+  margin-right: $width/21.3;
+  margin-bottom: $width/13.7;
+}

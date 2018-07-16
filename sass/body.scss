@@ -1,0 +1,31 @@
+@import "variables";
+body{
+  margin: 0 auto;
+  height: $height;
+  width: $width;
+}
+a{
+  text-decoration: none;
+}
+img{
+  object-fit: cover;
+}
+header{
+  height: $height;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  background-color: $color1;
+  font-family: $font1;
+  color: $color2;
+  @include font(300, 16px, 24px, center);
+  box-sizing: border-box;
+  padding: 40px 30px 372px 30px;
+  a{
+    text-decoration: none;
+	color: $color2;
+	}
+}
+.header-txt, .loupe, nav, .basket, .logotype, .slider-header a{
+  z-index: 15;
+}

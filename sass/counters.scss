@@ -1,0 +1,52 @@
+@import "variables";
+.counters{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 60px;
+  background: -webkit-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+  background: -moz-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+  background: -o-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+  background: -ms-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+  background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+  &_item{
+    height: $width/9.6;
+    margin-right: $width/27.4;
+    font-family: $font1;
+    text-align: center;
+    &:after{
+      content: "";
+      display: block;
+      width: 40px;
+      height: 2px;
+      background-color: $color2;
+      margin-left: 32%;
+      }
+    & svg{
+      width: 44px;
+      height: 44px;
+      margin-bottom: 30px;
+      fill: $color9;
+    }
+  }
+}
+
+figcaption span {
+  display: block;
+}
+
+.counters_item-number{
+  width: 100%;
+  color: $color2;
+  @include font(200, 48px, 36px, center);
+  margin-bottom: 30px;
+}
+
+.counters_item-th{
+  width: 100%;
+  color: $color9;
+  @include font(300, 14px, 20px, center);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}

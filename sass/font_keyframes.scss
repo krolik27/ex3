@@ -1,0 +1,76 @@
+@mixin font-face($name, $path, $weight, $style, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: local(quote($name))+", "+$src;
+	}
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+@include font-face('montserratlight', "../fonts/montserrat-light", normal, 300, ttf woff woff2);
+@include font-face('ralewaybold', "../fonts/raleway-bold", normal, 700, ttf woff woff2);
+@include font-face('ralewaysemibold', "../fonts/raleway-semibold", normal, 600, ttf woff woff2);
+@include font-face('ralewaymedium', "../fonts/raleway-medium", normal, 500, ttf woff woff2);
+
+
+@include keyframes(activemovie) {
+  from{
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@include keyframes(shake) {
+  from{
+    transform: translateX(0);
+    transform: rotate(0deg);
+  }
+  to {
+    transform: translateX(50px);
+    transform: rotate(-10deg);
+  }
+}
+@include keyframes(blinking) {
+  10% {
+    background-color: #998675;
+  }
+  60% {
+    background-color: transparent;
+    border: 2px solid #998675;
+  }
+  100% {
+    background-color: #CCB9A8;
+    border: 2px solid #998675;
+  }
+}

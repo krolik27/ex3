@@ -1,0 +1,179 @@
+@import "variables";
+.logotype{
+  margin-top: -$width/113;
+}
+
+.logotype-svg{
+  fill: $color2;
+  margin: -$width/71 2px 0 $width/6;
+  width: $width/30;
+  height: $width/34;
+}
+
+.navlogo-header{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: $width/9;
+}
+
+.header-txt{
+  margin-bottom: $width/37;
+  h1{
+    font-family: $font2;
+    color: $color2;
+    @include font(700, 52px, 20px, center);
+  }
+  h2{
+    font-family: $font3;
+    color: $color2;
+    @include font(500, 36px, 20px, center);
+  }
+}
+
+.button-get,
+.button-load,
+.button-purchase{
+  padding: 21px 38px;
+  background-color: $color5;
+  border-radius: 3px;
+  font-family: $font2;
+  color: $color2;
+  @include font(700, 14px, 23px, center);
+  text-transform: uppercase;
+}
+
+.button-purchase:active,
+.button-get:active,
+.button-load:active{
+  background-color: $color2;
+  color: $color5;
+  border: $border $color5;
+  font-size: 20px;
+}
+
+.button-purchase:hover,
+.button-get:hover,
+.button-load:hover{
+  -webkit-animation: blinking 1s ease infinite;
+  animation: blinking 1s ease infinite;
+}
+
+
+.logotype:hover{
+  -webkit-animation: shake 2s ease-in-out normal infinite;
+  animation: shake 2s ease-in-out normal infinite;
+}
+
+.slider-header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.basket svg{
+  margin-left: $width/30.5;
+  fill: $color2;
+  width: $width/106;
+  height: $width/80;
+}
+  
+.loupe{
+  margin-left: $width/68.7;
+  z-index: 2;
+  & input[type="search"]{
+    width: $width/80;
+    height: $width/80;
+    outline: none;
+    background: url('../img/loupe.png') no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    border: $border transparent;
+  }
+}
+
+input[type="search"]:focus{
+  width: $width/11;
+  padding: 10px;
+  transition: width 1s ease-out;
+  background-position: right;
+  color: $color2;
+  border: $border $color2;
+}
+
+.basket svg:hover,
+.header-list a:hover{
+  color: $color6;
+  fill: $color6;
+}
+
+.header-list{
+  list-style-type: none;
+  margin-left: $width/11;
+  z-index: 2;
+  a{
+    font-family: $font1;
+    color: $color2;
+    @include font(300, 12px, 0, left);
+    margin-right: $width/66;
+  }
+  &-nav ul{
+    display: flex;
+    margin-top: 0;
+  }
+}
+
+.labmenu{
+  position: relative;
+  left: 40%;
+  width: $width/32;
+  height: $width/32;
+  cursor: pointer;
+  display: none;
+  border: $border $color2;
+  margin: 0;
+  padding: 0;
+  &:after{
+    content: 'Menu';
+    position: absolute;
+    width: 100%;
+    @include font(700, 13px, 20, center);
+      left: 2px;
+      top: -80px;
+  }
+}
+
+.labmenu span,
+.labmenu span:before,
+.labmenu span:after{
+  position: absolute;
+  left: $width/192;
+  top: $width/87;
+  width: $width/48;
+  height: $width/480;
+  background: $color2;
+  border-radius: 0.2em;
+}
+
+.labmenu span:before,
+.labmenu span:after{
+  content: '';
+  left: 0;
+}
+
+.labmenu span:before{
+  top: -$width/240;
+}
+
+.labmenu span:after{
+  top: $width/240;
+}
+
+#menu{
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked~.header-list{
+  visibility: visible;
+}

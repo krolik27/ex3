@@ -1,0 +1,56 @@
+@import "variables";
+.services-figures{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: $width/23 $width/23 $width/38 $width/23;
+  font-family: $font1;
+  @include font(300, 14px, 24px, center);
+  color: $color7;
+}
+.services-figures-items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  width: 250px;
+  margin: 20px;
+  h4{
+    font-family: $font4;
+    @include font(600, 22px, 24px, center);
+    padding-bottom: 19px;
+    margin: 20px 0 0 0;
+    color: $color8;
+  }
+  figcaption{
+    padding-bottom: 30px;
+  }
+}
+
+.services-figures-items:hover h4,
+.services-figures-items:hover figcaption{
+  color: $color9;
+  opacity: .9;
+}
+
+.icon-svg {
+  fill: $color8;
+}
+
+.services-figures-items:hover svg{
+  fill: $color9;
+  opacity: .9;
+}
+
+.services-figures-items:hover:after{
+  background-color: $color9;
+}
+
+.services-figures-items:after{
+  content: "";
+  display: block;
+  width: $width/27;
+  height: 2px;
+  background-color: $color8;
+}
