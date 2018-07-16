@@ -1,0 +1,47 @@
+$color1: #5c5454;
+$color2: #ffffff;
+$color3: rgb(190, 190, 190);
+$color4: rgb(230, 230, 230);
+$color5: #998675;
+$color6: #c7b29a;
+$color7: #8c8c8c;
+$color8: #555555;
+$color9: #c7b299;
+$color10: #fbfaf8;
+$color11: #615855;
+$color12: #362f2d;
+$color13: #73685E;
+$color14: #191919;
+$color15: #111111;
+$color16: #959595;
+$color17: #242424;
+$width: 1920px;
+$height: 100%;
+$border: 2px solid;
+$font1: 'montserratlight', 'Arial', sans-serif;
+$font2: 'ralewaybold', Verdana, Geneva, sans-serif;
+$font3: 'ralewaymedium', Verdana, Geneva, sans-serif ;
+$font4: 'ralewaysemibold', Verdana, Geneva, sans-serif;
+@mixin font($weight, $size, $lineheight, $align){
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineheight;
+  text-align: $align;
+}
+@mixin screen2($size) {
+  $mobile: "(max-width: 991px)";
+  @if $size == mobile {
+    @media only screen and #{$mobile} {
+      @content;
+    }
+  }
+}
+
+@mixin screen1($size) {
+  $desktop: "(max-width: 1199px)";
+  @if $size == desktop {
+    @media only screen and #{$desktop} {
+      @content;
+    }
+  }
+}
